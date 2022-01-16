@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>랜덤 여행지 추천기</title>
+</head>
+<body style="background-color:#FAD0C9;">
+    <div style="padding:50px;"></div>
+    <div style="text-align:center">
+        <strong>
+            <p style="font-size: 70px; color:#6E6E6D">버튼을 클릭하세요</p>
+        </strong>
+        <!-- 여기는 랜덤한 값을 추출하는 부분 -->
+        <script>
+             var random1 = (Math.floor(Math.random() * (381601797 - 341601796)) + 341601796)/10000000;
+             var random2 = (Math.floor(Math.random() * (1289677998 - 1262365489)) + 1262365489)/10000000;
+             var a1 = String(random1);
+             var a2 = String(random2);
+             var arr = 'https://www.google.co.kr/maps/@'.concat(`${random1},${random2},13.22z`);
+             document.write(("위도:"+random1+'<br />'+"경도:"+random2).fontsize(6)+"<br><br>");
+             function doSomething() {
+             window.location.href = arr;
+             }
+         </script>
+         <div id="inner1"></div>
+         <div id="inner2"></div>
+    <button onclick="doSomething();" style="width: 350px; height: 150px; font-size: 40px; background-color:#D64161; color:#364b44; border:none; ">구글 지도로<br>이동하기</button>
+    </div>
+</body>
